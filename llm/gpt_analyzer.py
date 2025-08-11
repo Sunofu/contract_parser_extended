@@ -122,11 +122,11 @@ def extract_goods_table(text: str) -> list:
                 "сумма": ""
             }}
         ]
-        
+        Верни только Json и ничего больше
         Если таблицы нет, верни строго пустой массив [] без другого текста.
         
         Текст документа:
-        {text[:3000]}
+        {text[:20000]}
         """
 
         response = client.chat.completions.create(

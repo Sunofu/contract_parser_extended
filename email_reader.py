@@ -13,7 +13,7 @@ def fetch_attachments(imap_host, login, password, save_dir="temp_files"):
         imap.select("inbox")
         status, messages = imap.search(None, '(UNSEEN)')
         attachments = []
-        for num in messages[0].split()[:1000]:
+        for num in messages[0].split():
             print(f"Смотрит письмо {num}")
             _, msg_data = imap.fetch(num, '(RFC822)')
             msg = email.message_from_bytes(msg_data[0][1])
