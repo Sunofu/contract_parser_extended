@@ -1,5 +1,5 @@
 # Переменные окружения и секреты
-.env
+
 .env.local
 .env.production
 
